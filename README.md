@@ -32,25 +32,24 @@ A responsive web application built with modern technologies, featuring a TypeScr
 ### Frontend Setup
 ```bash
 cd frontend
-pnpm install
-pnpm dev
+npm install
+npm dev
 ```
 
 ### Backend Setup
 ```bash
 cd backend
-pnpm install
-docker-compose up -d   # Start PostgreSQL
-pnpm prisma migrate dev
-pnpm dev
+npm install
+npm prisma migrate dev
+node index.js
+
+docker pull shivansh1299/assignment
+docker run shivansh1299/assignment
 ```
 
 ## Environment Variables
 
-### Frontend
-Create `.env` file in frontend directory:
-```
-VITE_API_URL=your_backend_url
+
 ```
 
 ### Backend
@@ -72,7 +71,7 @@ PORT=3000
 ### Frontend
 ```bash
 cd frontend
-pnpm build
+npm build
 ```
 
 ### Backend
@@ -85,7 +84,7 @@ docker build -t your-app-name .
 
 ### Frontend (Cloudflare Pages)
 - Connect your repository to Cloudflare Pages
-- Set build command: `pnpm build`
+- Set build command: `npm build`
 - Set build output directory: `dist`
 
 ### Backend (Google Cloud Run)
