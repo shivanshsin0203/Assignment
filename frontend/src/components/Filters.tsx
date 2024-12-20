@@ -12,7 +12,7 @@ export default function Filters() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/addUser', formData);
+      const response = await axios.post('https://assignment-26746338369.asia-south1.run.app/addUser', formData);
       console.log(response.data)
       addUser(response.data.data.id, response.data.data.name,response.data.data.cohort);
       setIsModalOpen(false);

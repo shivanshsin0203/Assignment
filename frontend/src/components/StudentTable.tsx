@@ -7,7 +7,7 @@ import Userstore from '../store/store';
 export default function StudentTable() {
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:3001/users/${id}`);
+      await axios.delete(`https://assignment-26746338369.asia-south1.run.app/users/${id}`);
       removeUser(id);
     } catch (error) {
       console.error("Error deleting user:", error);
@@ -18,7 +18,7 @@ export default function StudentTable() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:3001/users");
+        const response = await axios.get("https://assignment-26746338369.asia-south1.run.app/users");
         const formattedUsers = response.data.users.map(user => ({
           id: user.id,
           name: user.name,
